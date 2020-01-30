@@ -1,2 +1,2 @@
 FROM ubuntu:latest
-RUN apt-get updateù
+RUN apt-get update
