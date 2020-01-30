@@ -1,5 +1,7 @@
-FROM ubuntu:latest
-RUN apt-get update
+FROM python:alpine
 
-ENTRYPOINT [ "tail" ]
-CMD ["-f", "/dev/zero"]
+WORKDIR /www
+COPY ./ ./
+
+ENTRYPOINT [ "python" ]
+CMD ["-m", "http.server", "8000"]
